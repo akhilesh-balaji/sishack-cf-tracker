@@ -1,4 +1,7 @@
+
   // Your web app's Firebase configuration
+
+// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAIIdB5-KL3zrLJF6CvtobOngzZ9Qt7P9Y",
     authDomain: "cftracker-nextgen.firebaseapp.com",
@@ -22,6 +25,8 @@ var firebaseConfig = {
     full_name = document.getElementById('full_name').value
     birth_year = document.getElementById('birth_year').value
     gender = document.getElementById('gender').value
+
+
   
     // Validate input fields
     if (validate_email(email) == false || validate_password(password) == false) {
@@ -29,8 +34,13 @@ var firebaseConfig = {
       return
       // Don't continue running the code
     }
+
     if (validate_field(full_name) == false || validate_field(birth_year) == false || validate_field(gender) == false) {
       document.getElementById("status").innerHTML = "One of the fields are invalid!";
+
+    if (validate_field(full_name) == false) {
+      document.getElementById("status").innerHTML = "Given username is invalid!";
+
       return
     }
    
@@ -144,4 +154,4 @@ var firebaseConfig = {
       return true
     }
   }
-  
+}
