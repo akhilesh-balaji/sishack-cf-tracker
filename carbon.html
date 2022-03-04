@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		/* style goes here */
+		body>div {
+			text-align: center;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="carbon.js"></script>
+    <title>Pollution checker</title>
+</head>
+<body class="container">
+	<div class="row">
+		<div class="w-25 bg-light text-dark rounded border p-5 m-4 text-center column" id="col-1">
+			Do you use a car?<br/><br/>
+			<div class="text-muted">
+				<input type="radio" name="use-car" id="use-car-yes" value="yes"/><label for="use-car-yes">Yes</label>
+				&nbsp;&nbsp;
+				<input type="radio" name="use-car" id="use-car-no" value=""/><label for="use-car-no">No</label>
+			</div>
+		</div>
+		<div class="w-25 bg-light text-dark rounded border p-5 m-4 text-center column" id="col-2">
+			<div id="second-div">
+				Which model?<br/><br/>
+				<select id="models"></select>
+			</div>
+		</div>
+		<div class="w-25 bg-light text-dark rounded border p-5 m-4 text-center column" id="col-3">
+			<div id="third-div">
+				Approximately how many km have you travelled this week?
+				<br/><br/>
+				<input type="text" name="km-travel" id="travelled" placeholder="Distance (in km)"/>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" id="col-4">HERE</div>
+	</div>
+</body>
+</html>
