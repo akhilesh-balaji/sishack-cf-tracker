@@ -1,7 +1,8 @@
 **Stonehill International School (SISHACK 2022)**
 
 # Who are we?
-We are NextGen, a group of programmers aspiring to use our skills for the betterment of humanity and the surrounding environment. The combustion of fossil fuels and the extensive usage of greenhouse gases like carbon dioxide is a major contributor to climate change, which is probably the biggest problem humanity will ever have to face. 
+We are NextGen, a group of programmers aspiring to use our skills for the betterment of humanity and the surrounding environment. The combustion of fossil fuels and the extensive usage of greenhouse gases like carbon dioxide is a major contributor to climate change, which is probably the biggest problem humanity will ever have to face.
+
 Our website - CarboTrack - aims to mitigate this issue by allowing our users to input their activities in the week which contribute to a carbon footprint. A carbon footprint is a measure of how responsible you have been in the week, which is based on the car model and number of kilometers travelled, the food consumed, and so on. 
 
 # What sets us apart?

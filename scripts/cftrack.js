@@ -29,7 +29,7 @@ const transportation = {
     bus: 0.66, // per passenger
     cycle: 0,
     electricCar: 0,
-    car: 0.2, // per kilometer
+    car: 0.15, // per kilometer
     plane: 0.285 // per kilometer per passenger
 }
 
@@ -86,6 +86,15 @@ const calcFootprint = () => {
     const p2_eating_chickenStirFry = document.getElementById("bx--checkbox-p2-eating-chicken").checked;
     const p2_eating_hardBoiledEgg = document.getElementById("bx--checkbox-p2-eating-egg").checked;
 
+    const p2_eating_apples_num = document.getElementById("number-input0").value;
+    const p2_eating_bananas_num = document.getElementById("number-input1").value;
+    const p2_eating_eggs_num = document.getElementById("number-input2").value;
+    const p2_eating_chickenStirFry_num = document.getElementById("number-input3").value;
+
+    const p2_travelling_car_dist = document.getElementById("number-input4").value;
+    const p2_travelling_plane_dist = document.getElementById("number-input5").value;
+    const p2_travelling_plane_ppl = document.getElementById("number-input6").value;
+
     const p2_transportation_motorcycle = document.getElementById("bx--checkbox-p2-travelling-motorcycle").checked;
     const p2_transportation_scooter = document.getElementById("bx--checkbox-p2-travelling-scooter").checked;
     const p2_transportation_bus = document.getElementById("bx--checkbox-p2-travelling-bus").checked;
@@ -98,10 +107,10 @@ const calcFootprint = () => {
     // const p2_mobilephone_dataUsage = document.getElementById("bx--checkbox-p2-mobilephone-mobile-data-usage").checked;
 
     if (p2_eating_apples) {
-        totalcf += consumables.apples;
+        totalcf += consumables.apples * p2_eating_apples_num;
     }
     if (p2_eating_bananas) {
-        totalcf += consumables.bananas;
+        totalcf += consumables.bananas * p2_eating_bananas_num;
     }
     if (p2_eating_potatoChips) {
         totalcf += consumables.potatoChips;
@@ -141,10 +150,10 @@ const calcFootprint = () => {
         totalcf += transportation.electricCar;
     }
     if (p2_transportation_car) {
-        totalcf += transportation.car;
+        totalcf += transportation.car * p2_travelling_car_dist;
     }
     if (p2_transportation_plane) {
-        totalcf += transportation.plane;
+        totalcf += transportation.plane * p2_travelling_plane_dist * p2_travelling_plane_ppl;
     }
 
     // if (p2_mobilephone_mobileToMobile) {
@@ -157,9 +166,9 @@ const calcFootprint = () => {
     console.log(totalcf);
     totalcf = Math.round(totalcf * 1000) / 1000;
     document.getElementById("cfvalue").innerHTML = totalcf + "kg";
-    document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low." : totalcf < 5 ? "Your carbon footprint is moderate." : "Your carbon footprint is high.";
+    document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low. AMAZING job!" : totalcf < 5 ? "Your carbon footprint is not that high. Great going!" : "Your carbon footprint is very high. Try switching to an electronic car.";
 }
 
 const getScore = (cfInKg) => {
-    return Math.round((cfInKg / 15) * 30);
+    return Math.round((cfInKg / 15) * 30) > 30 ? 30 : Math.round((cfInKg / 15) * 30);
 }

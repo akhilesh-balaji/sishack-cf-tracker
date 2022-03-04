@@ -5,6 +5,12 @@ body {
     padding-top: 20px;
 }
 
+.landpageh1 {
+    padding-top: 50px;
+    font-weight: 900;
+    font-size: 120px;
+}
+
 form {
     padding-top: 50px;
 }

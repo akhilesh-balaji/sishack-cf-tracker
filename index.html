@@ -40,7 +40,7 @@
         <nav class="bx--header__nav" aria-label="Platform Name" data-header-nav>
             <ul class="bx--header__menu-bar" aria-label="Platform Name">
                 <li>
-                    <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="0">
+                    <a class="bx--header__menu-item" href="tracker.html" tabindex="0">
             Tracker
           </a>
                 </li>
@@ -55,7 +55,7 @@
           </a>
                 </li>
                 <li class="bx--header__submenu" data-header-submenu>
-                    <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="true" href="javascript:void(0)" tabindex="0">
+                    <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)" tabindex="0">
             Account
             <svg class="bx--header__menu-arrow" width="12" height="7" aria-hidden="true">
               <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
@@ -97,127 +97,11 @@
         </div>
     </header>
 
-    <!-- The carbon footprint tracker -->
-
-    <form id="p1">
-        <fieldset class="bx--fieldset">
-            <legend class="bx--label">What activities did you engage in today? Select all that apply.</legend>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p1-eating" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p1-eating" class="bx--checkbox-label">&nbsp;&nbsp;Eating/Drinking</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p1-travelling" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p1-travelling" class="bx--checkbox-label">&nbsp;&nbsp;Travelling</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p1-usingcomputer" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p1-usingcomputer" class="bx--checkbox-label">&nbsp;&nbsp;Using a Computer</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p1-electricity" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p1-electricity" class="bx--checkbox-label">&nbsp;&nbsp;Used a Non-Renewable Source of Electricity</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p1-usingmobilephone" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p1-usingmobilephone" class="bx--checkbox-label">&nbsp;&nbsp;Used a Mobile Phone</label>
-            </div>
-        </fieldset>
-        <div class="bx--form-item">
-            <button class="bx--btn bx--btn--primary" type="button" onclick="next1();">Next</button>
-        </div>
-    </form>
-
-    <form id="p2-eating">
-        <fieldset class="bx--fieldset">
-            <legend class="bx--label">What did you consume today? Select all that apply.</legend>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-apples" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-apples" class="bx--checkbox-label">&nbsp;&nbsp;Apples</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-banana" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-banana" class="bx--checkbox-label">&nbsp;&nbsp;Banana</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-potatochips" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-potatochips" class="bx--checkbox-label">&nbsp;&nbsp;Potato Chips</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-cake" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-cake" class="bx--checkbox-label">&nbsp;&nbsp;Cake</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-rice" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-rice" class="bx--checkbox-label">&nbsp;&nbsp;Rice</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-yoghurt" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-yoghurt" class="bx--checkbox-label">&nbsp;&nbsp;Fruit Yoghurt</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-pizza" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-pizza" class="bx--checkbox-label">&nbsp;&nbsp;Cheese Pizza</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-egg" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-egg" class="bx--checkbox-label">&nbsp;&nbsp;Eggs</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-eating-chicken" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-eating-chicken" class="bx--checkbox-label">&nbsp;&nbsp;Chicken</label>
-            </div>
-        </fieldset>
-        <div class="bx--form-item">
-            <button class="bx--btn bx--btn--primary" type="button" onclick="next2eating();">Next</button>
-        </div>
-    </form>
-
-    <form id="p2-travelling">
-        <fieldset class="bx--fieldset">
-            <legend class="bx--label">What did you travel with today? Select all that apply.</legend>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-car" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-car" class="bx--checkbox-label">&nbsp;&nbsp;Non-Electric Car</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-ecar" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-ecar" class="bx--checkbox-label">&nbsp;&nbsp;Electric Car</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-plane" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-plane" class="bx--checkbox-label">&nbsp;&nbsp;Plane</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-motorcycle" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-motorcycle" class="bx--checkbox-label">&nbsp;&nbsp;Motorcycle</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-scooter" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-scooter" class="bx--checkbox-label">&nbsp;&nbsp;Scooter</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-bus" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-bus" class="bx--checkbox-label">&nbsp;&nbsp;Bus</label>
-            </div>
-            <div class="bx--form-item bx--checkbox-wrapper">
-                <input id="bx--checkbox-p2-travelling-cycle" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
-                <label for="bx--checkbox-p2-travelling-cycle" class="bx--checkbox-label">&nbsp;&nbsp;Cycle</label>
-            </div>
-        </fieldset>
-        <div class="bx--form-item">
-            <button class="bx--btn bx--btn--primary" type="button" onclick="next2travelling();">Next</button>
-        </div>
-    </form>
-
-    <div id="cfcalcdiv">
-        <h1>Your Carbon Footprint for Today is <strong><span id="cfvalue">0.00 kg</span></strong> of CO<sub>2</sub>!</h1>
-        <h3 id="howitsgoing">That's low!</h3>
-        <button class="bx--btn bx--btn--primary bx--btn--field" type="button" style="padding-top: 5px;" onclick="shareEmojiResults();">
-            Share!
-          </button>
-        <p id="em-res">Emoji Results</p>
-    </div>
+    <h1 class="landpageh1">CarboTrack</h1>
+    <p>The combustion of fossil fuels and the extensive usage of greenhouse gases like carbon dioxide is a major contributor to climate change, which is probably the biggest problem humanity will ever have to face. Our application—CarboTrack—aims to mitigate
+        this issue by allowing our users to input their activities in the week which contribute to a carbon footprint. A carbon footprint is a measure of how responsible you have been in the week, which is based on the car model and number of kilometers
+        travelled, the food consumed, and so on.</p>
+    <button class="bx--btn bx--btn--primary bx--btn--field" style="margin-top: 20px;">Get started!</button>
 
     <div data-modal id="modal-auosvf0xivd" class="bx--modal " role="dialog" aria-modal="true" aria-labelledby="modal-auosvf0xivd-label" aria-describedby="modal-auosvf0xivd-heading" tabindex="-1">
         <div class="bx--modal-container">
