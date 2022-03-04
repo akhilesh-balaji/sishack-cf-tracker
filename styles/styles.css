@@ -31,3 +31,7 @@ form {
 .ex1 {
     padding-top: 50px;
 }
+
+div.leftAllign {
+    text-align: left;
+}
