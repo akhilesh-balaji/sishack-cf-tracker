@@ -9,12 +9,14 @@
     <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/carbon-components-svelte/css/g100.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="backend.js"></script>
+    <script src="/scripts/backend.js"></script>
     <title>CarboTrack</title>
 </head>
 
 <body>
-    <!-- The top header bar, containing menu items -->
+
+    <section>
+        <!-- The top header bar, containing menu items -->
     <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
         <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
         <a href="./">
@@ -93,8 +95,25 @@
             </button>
         </div>
     </header>
+    </section>
+    
+    <section>
+        <p>Username: <p id="username">name</p></p>
+        <p>Email: <p id="email">mail</p></p>
+        <p>Birth year: <p id="birth_year">year</p></p>
+        <p>Gender: <p id="gender">gender</p></p>
+        <p>Last date of login: <p id="last_login">date</p> </p>
+        
+    </section>
+
 
 
 </body>
+<script>
+    document.getElementById('username').innerHTML == user_data.full_name;
+    document.getElementById('email').innerHTML == user_data.email;
+    document.getElementById('birth_year').innerHTML == user_data.birth_year;
+    document.getElementById('gender').innerHTML == user_data.gender;
+</script>
 
 </html>
