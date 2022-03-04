@@ -9,41 +9,89 @@
     <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/carbon-components-svelte/css/g100.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <title>Document</title>
+    <title>CarboTrack</title>
 </head>
 
 <body>
-    <button class="bx--btn bx--btn--primary bx--btn--field" type="button">
-          Button
-        </button>
-    <button class="bx--btn bx--btn--primary bx--btn--field" type="button" disabled>
-          Button
-        </button>
-    <button class="bx--btn bx--btn--primary bx--btn--field" type="button">
-          With icon
-          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path></svg>
-        </button>
-    <button class="bx--btn bx--btn--primary bx--btn--field" type="button" disabled>
-          With icon
-          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path></svg>
-        </button>
-    <button class="bx--btn bx--btn--primary bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--bottom bx--tooltip--align-center  bx--btn--field">
-          <span class="bx--assistive-text">Add</span>
-          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path></svg>
-        </button>
-    <!-- The markup below is for demonstration purposes only -->
-    <div class="example-input-button-pairing">
-        <div class="bx--form-item">
-            <label for="text-input-3" class="bx--label">Text Input label</label>
-            <input id="text-input-3" type="text" class="bx--text-input" placeholder="Optional placeholder text">
+    <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
+        <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
+        <a href="./">
+            <button class="bx--header__menu-trigger bx--header__action" aria-label="Open menu" title="Open menu" data-navigation-menu-panel-label-expand="Open menu" data-navigation-menu-panel-label-collapse="Close menu" data-navigation-menu-target="#navigation-menu-m6ibyfeacg">
+                <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                        }
+                      </style>
+                    </defs>
+                    <path d="M29,26H23V22a2.002,2.002,0,0,1,2-2h2V18H23V16h4a2.0023,2.0023,0,0,1,2,2v2a2.0023,2.0023,0,0,1-2,2H25v2h4Z" transform="translate(0 0)"/>
+                    <path d="M19,22H15a2.0023,2.0023,0,0,1-2-2V10a2.002,2.002,0,0,1,2-2h4a2.002,2.002,0,0,1,2,2V20A2.0023,2.0023,0,0,1,19,22ZM15,10V20h4V10Z" transform="translate(0 0)"/>
+                    <path d="M11,22H5a2.0023,2.0023,0,0,1-2-2V10A2.002,2.002,0,0,1,5,8h6v2H5V20h6Z" transform="translate(0 0)"/>
+                    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
+                  </svg>
+            </button>
+        </a>
+        <a class="bx--header__name" href="javascript:void(0)" title="">
+            <span class="bx--header__name--prefix">
+        Carbo
+      </span>Track
+        </a>
+        <nav class="bx--header__nav" aria-label="Platform Name" data-header-nav>
+            <ul class="bx--header__menu-bar" aria-label="Platform Name">
+                <li>
+                    <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="0">
+            Tracker
+          </a>
+                </li>
+                <li>
+                    <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="0">
+            Leaderboard
+          </a>
+                </li>
+                <li class="bx--header__submenu" data-header-submenu>
+                    <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="true" href="javascript:void(0)" tabindex="0">
+            Account
+            <svg class="bx--header__menu-arrow" width="12" height="7" aria-hidden="true">
+              <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+            </svg>
+          </a>
+                    <ul class="bx--header__menu" aria-label="L1 link 3">
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="-1">
+                                <span class="bx--text-truncate--end">
+                  Sign up
+                </span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="-1">
+                                <span class="bx--text-truncate--end">
+                  Log in
+                </span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="-1">
+                                <span class="bx--text-truncate--end">
+                  Dashboard
+                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </nav>
+        <div class="bx--header__global">
+            <button class="bx--header__menu-trigger bx--header__action" aria-label="Action 1" title="Action 1" data-navigation-menu-panel-label-expand="Action 1" data-navigation-menu-panel-label-collapse="Close menu" data-product-switcher-target="#switcher-bqavcareoq">
+        <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="bx--navigation-menu-panel-expand-icon" width="20" height="20" viewBox="0 0 32 32"><path d="M8.24 25.14L7 26.67a13.79 13.79 0 004.18 2.44l.69-1.87A12 12 0 018.24 25.14zM4.19 18l-2 .41A14.09 14.09 0 003.86 23L5.59 22A12.44 12.44 0 014.19 18zM11.82 4.76l-.69-1.87A13.79 13.79 0 007 5.33L8.24 6.86A12 12 0 0111.82 4.76zM5.59 10L3.86 9a14.37 14.37 0 00-1.64 4.59l2 .34A12.05 12.05 0 015.59 10zM16 2V4a12 12 0 010 24v2A14 14 0 0016 2z"></path></svg>
+        <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="bx--navigation-menu-panel-collapse-icon" width="20" height="20" viewBox="0 0 32 32"><path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"></path></svg>
+      </button>
+            </button>
         </div>
-        <div class="example-button-wrapper">
-            <button class=" bx--btn bx--btn--primary bx--btn--field" type="button">
-          Button
-        </button>
-        </div>
-    </div>
-    </button>
+    </header>
 </body>
 
 </html>
