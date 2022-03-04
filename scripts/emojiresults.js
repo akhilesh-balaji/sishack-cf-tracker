@@ -21,7 +21,7 @@ const emojiResults = (carbonFootprintInKg) => {
     for (let i = 0; i < getScore(carbonFootprintInKg); i++) {
         emojiString += "f";
     }
-    for (let i = 0; i < 29 - getScore(carbonFootprintInKg); i++) {
+    for (let i = 0; i < 30 - getScore(carbonFootprintInKg); i++) {
         emojiString += "s";
     }
     return replaceAll(replaceAll(explode(emojiString, 5), "s", "🌞"), "f", "🏭");
