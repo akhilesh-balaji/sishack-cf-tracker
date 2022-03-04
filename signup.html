@@ -110,8 +110,11 @@
                         <input type="email" id="email" placeholder="Email" class="bx--text-input">
                         <input type="password" id="password" placeholder="New Password" class="bx--text-input">
 
+                        <input type="text" id="birth_year" placeholder="Year of Birth [DD/MM/YYYY]" class="bx--text-input">
+                        <input type="text" id="gender" placeholder="Gender" class="bx--text-input">
+
                         <div id="button_container" style="padding-top: 10px" >
-                            <button class="bx--btn bx--btn--primary bx--btn--field" onclick="login()">Login</button>
+                            <button class="bx--btn bx--btn--primary bx--btn--field" onclick="register()">Register</button>
                         </div>
 
                     </div>
@@ -129,6 +132,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
     <!-- Our script must be loaded after firebase references -->
-    <script src="scripts/signup.js"></script>
+    <script src="scripts/backend.js"></script>
 
 </html>
