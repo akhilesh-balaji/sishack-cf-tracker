@@ -9,12 +9,10 @@
     <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/carbon-components-svelte/css/g100.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="backend.js"></script>
-    <title>CarboTrack</title>
+    <title>About Us | CarboTrack</title>
 </head>
 
 <body>
-    <!-- The top header bar, containing menu items -->
     <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
         <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
         <a href="./">
@@ -47,8 +45,13 @@
           </a>
                 </li>
                 <li>
-                    <a class="bx--header__menu-item" href="leaderboard.html" tabindex="0">
+                    <a class="bx--header__menu-item" href="javascript:void(0)" tabindex="0">
             Leaderboard
+          </a>
+                </li>
+                <li>
+                    <a class="bx--header__menu-item" href="./about.html" tabindex="0">
+            About Us
           </a>
                 </li>
                 <li class="bx--header__submenu" data-header-submenu>
@@ -94,6 +97,64 @@
         </div>
     </header>
 
+    <table>
+        <thead>
+            <th>User</th>
+            <th>Carbon Today</th>
+        </thead>
+        <tbody id="leaderboard"></tbody>
+    </table>
+
+    <h2 class="ex1">Daily Carbon Footprint Leaderboard!</h2>
+
+
+    <table class="bx--data-table  bx--data-table--zebra  " class="centre">
+        <thead>
+            <tr>
+                <th>
+                    <span class="bx--table-header-label">Name</span>
+                </th>
+                <th>
+                    <span class="bx--table-header-label">Carbon Footprint (kg)</span>
+                </th>
+                <th>
+                    <span class="bx--table-header-label">% change from yesterday</span>
+                </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Dhruv
+                </td>
+                <td>
+                    7.9
+                </td>
+                <td>
+                    3%
+                </td>
+
+                <tr>
+                    <td>
+                        Akhilesh
+                    </td>
+                    <td>
+                        9.8
+                    </td>
+                    <td>
+                        -4%
+                    </td>
+
+                    <tr>
+                        <td>
+                            You
+                        </td>
+                        <td>
+                            11.3
+                        </td>
+                        <td>
+                            8%
+                        </td>
+                        </div>
 
 </body>
 

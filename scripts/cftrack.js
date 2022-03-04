@@ -26,9 +26,11 @@ const mobilePhones = {
 const transportation = {
     motorcycle: 0.05,
     scooter: 0.027,
-    bus: 0.66,
+    bus: 0.66, // per passenger
     cycle: 0,
-    electricCar: 0
+    electricCar: 0,
+    car: 0.2, // per kilometer
+    plane: 0.285 // per kilometer per passenger
 }
 
 const next1 = () => {
@@ -81,6 +83,17 @@ const calcFootprint = () => {
     const p2_eating_chickenStirFry = document.getElementById("bx--checkbox-p2-eating-chicken").checked;
     const p2_eating_hardBoiledEgg = document.getElementById("bx--checkbox-p2-eating-egg").checked;
 
+    const p2_transportation_motorcycle = document.getElementById("bx--checkbox-p2-travelling-motorcycle").checked;
+    const p2_transportation_scooter = document.getElementById("bx--checkbox-p2-travelling-scooter").checked;
+    const p2_transportation_bus = document.getElementById("bx--checkbox-p2-travelling-bus").checked;
+    const p2_transportation_cycle = document.getElementById("bx--checkbox-p2-travelling-cycle").checked;
+    const p2_transportation_electricCar = document.getElementById("bx--checkbox-p2-travelling-ecar").checked;
+    const p2_transportation_car = document.getElementById("bx--checkbox-p2-travelling-car").checked;
+    const p2_transportation_plane = document.getElementById("bx--checkbox-p2-travelling-plane").checked;
+
+    // const p2_mobilephone_mobileToMobile = document.getElementById("bx--checkbox-p2-mobilephone-mobile-to-mobile").checked;
+    // const p2_mobilephone_dataUsage = document.getElementById("bx--checkbox-p2-mobilephone-mobile-data-usage").checked;
+
     if (p2_eating_apples) {
         totalcf += consumables.apples;
     }
@@ -109,8 +122,37 @@ const calcFootprint = () => {
         totalcf += consumables.hardBoiledEgg;
     }
 
+    if (p2_transportation_motorcycle) {
+        totalcf += transportation.motorcycle;
+    }
+    if (p2_transportation_scooter) {
+        totalcf += transportation.scooter;
+    }
+    if (p2_transportation_bus) {
+        totalcf += transportation.bus;
+    }
+    if (p2_transportation_cycle) {
+        totalcf += transportation.cycle;
+    }
+    if (p2_transportation_electricCar) {
+        totalcf += transportation.electricCar;
+    }
+    if (p2_transportation_car) {
+        totalcf += transportation.car;
+    }
+    if (p2_transportation_plane) {
+        totalcf += transportation.plane;
+    }
+
+    // if (p2_mobilephone_mobileToMobile) {
+    //     totalcf += mobilePhones.mobileToMobile;
+    // }
+    // if (p2_mobilephone_dataUsage) {
+    //     totalcf += mobilePhones.dataUsage;
+    // }
+
     console.log(totalcf);
-    totalcf = Math.round(totalcf * 100) / 100;
+    totalcf = Math.round(totalcf * 1000) / 1000;
     document.getElementById("cfvalue").innerHTML = totalcf + "kg";
-    document.getElementById("howitsgoing").innerHTML = totalcf < 0.5 ? "Your carbon footprint is low." : totalcf < 1 ? "Your carbon footprint is moderate." : "Your carbon footprint is high.";
+    document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low." : totalcf < 5 ? "Your carbon footprint is moderate." : "Your carbon footprint is high.";
 }
