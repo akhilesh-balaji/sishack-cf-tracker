@@ -4,3 +4,20 @@ body {
     margin-right: auto;
     padding-top: 20px;
 }
+
+form {
+    padding-top: 50px;
+}
+
+#p2-eating {
+    display: none;
+}
+
+#p2-travelling {
+    display: none;
+}
+
+#cfcalcdiv {
+    display: none;
+    padding-top: 50px;
+}
