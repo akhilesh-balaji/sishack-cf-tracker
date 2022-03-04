@@ -6,16 +6,22 @@ var usedmobilephone = false;
 
 var totalcf = 0;
 
+try {
+    JSON.parse(localStorage.getItem('tracker') || '');
+} catch {
+    localStorage.setItem('tracker', '{}');
+}
+
 const consumables = {
     apples: 0.032,
     bananas: 0.068,
     potatoChips: 0.075,
     cake: 0.155,
     riceAndBeans: 0.129,
-    fruitYougurt: 0.340,
-    cheesePizza: 3.336,
+    fruitYogurt: 0.340,
+    pizza: 3.336,
     chickenStirFry: 0.608,
-    hardBoiledEgg: 0.333
+    eggs: 0.333
 }
 
 const mobilePhones = {
@@ -75,21 +81,21 @@ const next2travelling = () => {
 
 const calcFootprint = () => {
     document.getElementById("cfcalcdiv").style.display = "block";
-
-    const p2_eating_apples = document.getElementById("bx--checkbox-p2-eating-apples").checked;
-    const p2_eating_bananas = document.getElementById("bx--checkbox-p2-eating-banana").checked;
-    const p2_eating_potatoChips = document.getElementById("bx--checkbox-p2-eating-potatochips").checked;
-    const p2_eating_cake = document.getElementById("bx--checkbox-p2-eating-cake").checked;
-    const p2_eating_riceAndBeans = document.getElementById("bx--checkbox-p2-eating-rice").checked;
-    const p2_eating_fruitYougurt = document.getElementById("bx--checkbox-p2-eating-yoghurt").checked;
-    const p2_eating_cheesePizza = document.getElementById("bx--checkbox-p2-eating-pizza").checked;
-    const p2_eating_chickenStirFry = document.getElementById("bx--checkbox-p2-eating-chicken").checked;
-    const p2_eating_hardBoiledEgg = document.getElementById("bx--checkbox-p2-eating-egg").checked;
-
-    const p2_eating_apples_num = document.getElementById("number-input0").value;
-    const p2_eating_bananas_num = document.getElementById("number-input1").value;
-    const p2_eating_eggs_num = document.getElementById("number-input2").value;
-    const p2_eating_chickenStirFry_num = document.getElementById("number-input3").value;
+    const foodVals = {
+        apples: document.getElementById("bx--checkbox-p2-eating-apples").checked,
+        bananas: document.getElementById("bx--checkbox-p2-eating-banana").checked,
+        potatoChips: document.getElementById("bx--checkbox-p2-eating-potatochips").checked,
+        cake: document.getElementById("bx--checkbox-p2-eating-cake").checked,
+        riceAndBeans: document.getElementById("bx--checkbox-p2-eating-rice").checked,
+        fruitYogurt: document.getElementById("bx--checkbox-p2-eating-yoghurt").checked,
+        pizza: document.getElementById("bx--checkbox-p2-eating-pizza").checked,
+        chickenStirFry: document.getElementById("bx--checkbox-p2-eating-chicken").checked,
+        eggs: document.getElementById("bx--checkbox-p2-eating-egg").checked,
+        apples_num: document.getElementById("number-input0").value,
+        bananas_num: document.getElementById("number-input1").value,
+        eggs_num: document.getElementById("number-input2").value,
+        chickenStirFry_num: document.getElementById("number-input3").value
+    };
 
     const p2_travelling_car_dist = document.getElementById("number-input4").value;
     const p2_travelling_plane_dist = document.getElementById("number-input5").value;
@@ -106,33 +112,15 @@ const calcFootprint = () => {
     // const p2_mobilephone_mobileToMobile = document.getElementById("bx--checkbox-p2-mobilephone-mobile-to-mobile").checked;
     // const p2_mobilephone_dataUsage = document.getElementById("bx--checkbox-p2-mobilephone-mobile-data-usage").checked;
 
-    if (p2_eating_apples) {
-        totalcf += consumables.apples * p2_eating_apples_num;
-    }
-    if (p2_eating_bananas) {
-        totalcf += consumables.bananas * p2_eating_bananas_num;
-    }
-    if (p2_eating_potatoChips) {
-        totalcf += consumables.potatoChips;
-    }
-    if (p2_eating_cake) {
-        totalcf += consumables.cake;
-    }
-    if (p2_eating_riceAndBeans) {
-        totalcf += consumables.riceAndBeans;
-    }
-    if (p2_eating_fruitYougurt) {
-        totalcf += consumables.fruitYougurt;
-    }
-    if (p2_eating_cheesePizza) {
-        totalcf += consumables.cheesePizza;
-    }
-    if (p2_eating_chickenStirFry) {
-        totalcf += consumables.chickenStirFry;
-    }
-    if (p2_eating_hardBoiledEgg) {
-        totalcf += consumables.hardBoiledEgg;
-    }
+    if (foodVals.apples) totalcf += consumables.apples * foodVals.apples_num;
+    if (foodVals.bananas) totalcf += consumables.bananas * foodVals.bananas_num;
+    if (foodVals.potatoChips) totalcf += consumables.potatoChips;
+    if (foodVals.cake) totalcf += consumables.cake;
+    if (foodVals.riceAndBeans) totalcf += consumables.riceAndBeans;
+    if (foodVals.fruitYogurt) totalcf += consumables.fruitYogurt;
+    if (foodVals.pizza) totalcf += consumables.pizza;
+    if (foodVals.chickenStirFry) totalcf += consumables.chickenStirFry;
+    if (foodVals.eggs) totalcf += consumables.hardBoiledEgg;
 
     if (p2_transportation_motorcycle) {
         totalcf += transportation.motorcycle;
@@ -167,6 +155,16 @@ const calcFootprint = () => {
     totalcf = Math.round(totalcf * 1000) / 1000;
     document.getElementById("cfvalue").innerHTML = totalcf + "kg";
     document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low. AMAZING job!" : totalcf < 5 ? "Your carbon footprint is not that high. Great going!" : "Your carbon footprint is very high. Try switching to an electronic car.";
+
+    const date = Date.now();
+    const days = ~~(date / (24 * 60 * 60 * 1000));
+    const tracker = JSON.parse(localStorage.getItem('tracker'));
+    const flag = tracker.hasOwnProperty(days);
+    tracker[days] = totalcf;
+    localStorage.setItem('tracker', JSON.stringify(tracker));
+    if (flag) return;
+    const streak = localStorage.getItem('streak');
+    localStorage.setItem('streak', tracker.hasOwnProperty(days - 1) ? ~~streak + 1 : 1);
 }
 
 const getScore = (cfInKg) => {
