@@ -15,7 +15,8 @@
         Suzuki Baleno	98
         Mahindra Thar	237
         Honda City	99
-        Honda Jazz	82`;
+        Honda Jazz	82
+        Skoda Rapid	105`;
                 const dataset = Object.fromEntries([['-', ''], ...inputStr.split('\n').map(line => line.split('\t').map(t => ~~t || t))]);
                 dataset['None of these'] = '';
         
@@ -30,7 +31,7 @@
                     if (!hasCar) {
                         $('second-div').style.visibility = 'hidden';
                         $('third-div').style.visibility = 'hidden';
-                        $('col-4').innerHTML = '<div class="text-muted">Cyclists are <em>excellent</em> for the environment.</div>';
+                        $('col-4').innerHTML = '<div class="text-muted">Cyclists are <em>great</em> for the environment.</div>';
                     } else {
                         $('second-div').style.visibility = 'visible';
                         $('third-div').style.visibility = 'visible';
