@@ -62,17 +62,20 @@ const next2eating = () => {
     document.getElementById("p2-eating").style.display = "none";
     if (travelled) {
         document.getElementById("p2-travelling").style.display = "block";
+    } else {
+        calcFootprint();
     }
 }
 
 const next2travelling = () => {
     travelled = false;
     document.getElementById("p2-travelling").style.display = "none";
-    document.getElementById("cfcalcdiv").style.display = "block";
     calcFootprint();
 }
 
 const calcFootprint = () => {
+    document.getElementById("cfcalcdiv").style.display = "block";
+
     const p2_eating_apples = document.getElementById("bx--checkbox-p2-eating-apples").checked;
     const p2_eating_bananas = document.getElementById("bx--checkbox-p2-eating-banana").checked;
     const p2_eating_potatoChips = document.getElementById("bx--checkbox-p2-eating-potatochips").checked;
@@ -155,4 +158,8 @@ const calcFootprint = () => {
     totalcf = Math.round(totalcf * 1000) / 1000;
     document.getElementById("cfvalue").innerHTML = totalcf + "kg";
     document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low." : totalcf < 5 ? "Your carbon footprint is moderate." : "Your carbon footprint is high.";
+}
+
+const getScore = (cfInKg) => {
+    return Math.round((cfInKg / 15) * 30);
 }

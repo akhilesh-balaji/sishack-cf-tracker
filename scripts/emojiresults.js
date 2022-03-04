@@ -12,16 +12,31 @@ function replaceAll(string, search, replace) {
     return string.split(search).join(replace);
 }
 
+function copyToClipboard(value) {
+    navigator.clipboard.writeText(value)
+}
+
 const emojiResults = (carbonFootprintInKg) => {
-    const score = (carbonFootprintInKg / 15) * 30;
     let emojiString = "";
-    for (let i = 0; i < score; i++) {
-        emojiString += "s";
-    }
-    for (let i = 0; i < 30 - score; i++) {
+    for (let i = 0; i < getScore(carbonFootprintInKg); i++) {
         emojiString += "f";
+    }
+    for (let i = 0; i < 29 - getScore(carbonFootprintInKg); i++) {
+        emojiString += "s";
     }
     return replaceAll(replaceAll(explode(emojiString, 5), "s", "🌞"), "f", "🏭");
 }
 
-console.log(emojiResults(13));
+const shareEmojiResults = () => {
+    // copy emojiResults to clipboard
+    const emojiString = `CarboTrack ${getScore(totalcf)}/30\n${emojiResults(totalcf)}`;
+    copyToClipboard(emojiString);
+
+    // share emojiResults
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(emojiString)}`;
+    window.open(shareUrl, '_blank');
+}
+
+// const setSpanEmojiResults = () => {
+//     document.getElementById("em-res").innerHTML = `CarboTrack ${getScore(totalcf)}/30\n${emojiResults(totalcf)}`;
+// }
