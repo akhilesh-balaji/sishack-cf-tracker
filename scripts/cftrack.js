@@ -29,6 +29,14 @@ const mobilePhones = {
     dataUsage: 0.3
 }
 
+const usingComputer = {
+    carbonEmissionPerHour: 0.0199
+}
+
+const electricity = {
+    carbonEmissionPerHour: 0.71
+}
+
 const transportation = {
     motorcycle: 0.05,
     scooter: 0.027,
@@ -122,6 +130,12 @@ const calcFootprint = () => {
         chickenStirFry_num: document.getElementById("number-input3").value
     };
 
+    const p1_usingcomputer = document.getElementById("bx--checkbox-p1-usingcomputer").checked;
+    const p1_usingcomputer_duration = document.getElementById("number-input").value;
+
+    const p1_electricity = document.getElementById("bx--checkbox-p1-electricity").checked;
+    const p1_electricity_duration = document.getElementById("number-input00").value;
+
     const p2_travelling_car_dist = document.getElementById("number-input4").value;
     const p2_travelling_plane_dist = document.getElementById("number-input5").value;
     const p2_travelling_plane_ppl = document.getElementById("number-input6").value;
@@ -167,6 +181,14 @@ const calcFootprint = () => {
     }
     if (p2_transportation_plane) {
         totalcf += transportation.plane * p2_travelling_plane_dist * p2_travelling_plane_ppl;
+    }
+
+    if (p1_usingcomputer) {
+        totalcf += usingComputer.carbonEmissionPerHour * p1_usingcomputer_duration;
+    }
+
+    if (p1_electricity) {
+        totalcf += electricity.carbonEmissionPerHour * p1_electricity_duration;
     }
 
     // if (p2_mobilephone_mobileToMobile) {

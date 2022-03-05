@@ -115,10 +115,42 @@
             <div class="bx--form-item bx--checkbox-wrapper">
                 <input id="bx--checkbox-p1-usingcomputer" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
                 <label for="bx--checkbox-p1-usingcomputer" class="bx--checkbox-label">&nbsp;&nbsp;Using a Computer</label>
+                <div class="bx--form-item">
+                    <div data-numberinput class="bx--number">
+                        <label for="number-input" class="bx--label">Duration</label>
+                        <div class="bx--number__input-wrapper">
+                            <input id="number-input" type="number" min="0" max="100" value="1">
+                            <div class="bx--number__controls">
+                                <button aria-label="increase number input" class="bx--number__control-btn up-icon" type="button" aria-live="polite" aria-atomic="true">
+                          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" aria-hidden="true"><path d="M0 4L4 0 8 4z"></path></svg>
+                        </button>
+                                <button aria-label="decrease number input" class="bx--number__control-btn down-icon" type="button" aria-live="polite" aria-atomic="true">
+                          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" aria-hidden="true"><path d="M8 0L4 4 0 0z"></path></svg>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="bx--form-item bx--checkbox-wrapper">
                 <input id="bx--checkbox-p1-electricity" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
                 <label for="bx--checkbox-p1-electricity" class="bx--checkbox-label">&nbsp;&nbsp;Used a Non-Renewable Source of Electricity</label>
+                <div class="bx--form-item">
+                    <div data-numberinput class="bx--number">
+                        <label for="number-input00" class="bx--label">Duration</label>
+                        <div class="bx--number__input-wrapper">
+                            <input id="number-input00" type="number" min="0" max="100" value="1">
+                            <div class="bx--number__controls">
+                                <button aria-label="increase number input" class="bx--number__control-btn up-icon" type="button" aria-live="polite" aria-atomic="true">
+                          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" aria-hidden="true"><path d="M0 4L4 0 8 4z"></path></svg>
+                        </button>
+                                <button aria-label="decrease number input" class="bx--number__control-btn down-icon" type="button" aria-live="polite" aria-atomic="true">
+                          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" aria-hidden="true"><path d="M8 0L4 4 0 0z"></path></svg>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="bx--form-item bx--checkbox-wrapper">
                 <input id="bx--checkbox-p1-usingmobilephone" class="bx--checkbox" type="checkbox" value="new" name="checkbox">
@@ -248,14 +280,6 @@
     </form>
 
     <form id="p2-travelling">
-        <img class="image" src="https://cdn.glitch.com/b89497a0-705f-4f4c-b06c-b60d2a67493e%2Fhotdog.jpg" style="display: none;" />
-        <div class="result">
-            <p>&nbsp;</p>
-        </div>
-        <div class="capture">
-            <div class="record"></div>
-            <input class="input" type="file" accept="image/*" onchange="handleUpload(this.files)" />
-        </div>
         <fieldset class="bx--fieldset">
             <legend class="bx--label">What did you travel with today? Select all that apply.</legend>
             <div class="bx--form-item bx--checkbox-wrapper">
