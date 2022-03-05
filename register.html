@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login or Register</title>
@@ -12,12 +13,13 @@
     <link rel="stylesheet" href="https://unpkg.com/carbon-components-svelte/css/g100.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <meta charset="utf-8">
-    </head>
-    <body>
-        <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
-            <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
-            <a href="./">
-                <button class="bx--header__menu-trigger bx--header__action" aria-label="Open menu" title="Open menu" data-navigation-menu-panel-label-expand="Open menu" data-navigation-menu-panel-label-collapse="Close menu" data-navigation-menu-target="#navigation-menu-m6ibyfeacg">
+</head>
+
+<body>
+    <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
+        <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
+        <a href="./">
+            <button class="bx--header__menu-trigger bx--header__action" aria-label="Open menu" title="Open menu" data-navigation-menu-panel-label-expand="Open menu" data-navigation-menu-panel-label-collapse="Close menu" data-navigation-menu-target="#navigation-menu-m6ibyfeacg">
                     <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
                         <defs>
                           <style>
@@ -32,111 +34,126 @@
                         <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
                       </svg>
                 </button>
-            </a>
-            <a class="bx--header__name" href="javascript:void(0)" title="">
-                <span class="bx--header__name--prefix">
+        </a>
+        <a class="bx--header__name" href="javascript:void(0)" title="">
+            <span class="bx--header__name--prefix">
             Carbo
           </span>Track
-            </a>
-            <nav class="bx--header__nav" aria-label="Platform Name" data-header-nav>
-                <ul class="bx--header__menu-bar" aria-label="Platform Name">
-                    <li>
-                        <a class="bx--header__menu-item" href="tracker.html" tabindex="0">
+        </a>
+        <nav class="bx--header__nav" aria-label="Platform Name" data-header-nav>
+            <ul class="bx--header__menu-bar" aria-label="Platform Name">
+                <li>
+                    <a class="bx--header__menu-item" href="tracker.html" tabindex="0">
                 Tracker
               </a>
-                    </li>
-                    <li>
-                        <a class="bx--header__menu-item" href="leaderboard.html" tabindex="0">
+                </li>
+                <li>
+                    <a class="bx--header__menu-item" href="leaderboard.html" tabindex="0">
                 Leaderboard
               </a>
-                    </li>
-                    <li>
-                        <a class="bx--header__menu-item" href="./about.html" tabindex="0">
+                </li>
+                <li>
+                    <a class="bx--header__menu-item" href="./about.html" tabindex="0">
                 About Us
               </a>
-                    </li>
-                    <li class="bx--header__submenu" data-header-submenu>
-                        <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)" tabindex="0">
+                </li>
+                <li class="bx--header__submenu" data-header-submenu>
+                    <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)" tabindex="0">
                 Account
                 <svg class="bx--header__menu-arrow" width="12" height="7" aria-hidden="true">
                   <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
                 </svg>
               </a>
-                        <ul class="bx--header__menu" aria-label="L1 link 3">
-                            <li role="none">
-                                <a class="bx--header__menu-item" href="register.html" tabindex="-1">
-                                    <span class="bx--text-truncate--end">
+                    <ul class="bx--header__menu" aria-label="L1 link 3">
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="register.html" tabindex="-1">
+                                <span class="bx--text-truncate--end">
                       Sign up
                     </span>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a class="bx--header__menu-item" href="login.html" tabindex="-1">
-                                    <span class="bx--text-truncate--end">
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="login.html" tabindex="-1">
+                                <span class="bx--text-truncate--end">
                       Log in
                     </span>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a class="bx--header__menu-item" href="Dashboard.html" tabindex="-1">
-                                    <span class="bx--text-truncate--end">
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a class="bx--header__menu-item" href="Dashboard.html" tabindex="-1">
+                                <span class="bx--text-truncate--end">
                       Dashboard
                     </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                </ul>
-            </nav>
-            <div class="bx--header__global">
-                <button class="bx--header__menu-trigger bx--header__action" aria-label="Action 1" title="Action 1" data-navigation-menu-panel-label-expand="Action 1" data-navigation-menu-panel-label-collapse="Close menu" data-product-switcher-target="#switcher-bqavcareoq">
+            </ul>
+            </li>
+            </ul>
+        </nav>
+        <div class="bx--header__global">
+            <button class="bx--header__menu-trigger bx--header__action" aria-label="Action 1" title="Action 1" data-navigation-menu-panel-label-expand="Action 1" data-navigation-menu-panel-label-collapse="Close menu" data-product-switcher-target="#switcher-bqavcareoq">
                     <svg width="20" height="20" id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>user</title><path d="M16,4a5,5,0,1,1-5,5,5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,16,2Z"/><path d="M26,30H24V25a5,5,0,0,0-5-5H13a5,5,0,0,0-5,5v5H6V25a7,7,0,0,1,7-7h6a7,7,0,0,1,7,7Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
           </button>
-                </button>
+            </button>
+        </div>
+    </header>
+
+
+    <div data-notification class="bx--inline-notification bx--inline-notification--info" role="alert" style="margin-top: 50px; position: fixed; right: 15px; bottom: 10px;">
+        <div class="bx--inline-notification__details">
+            <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10,1c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S15,1,10,1z M9.2,5h1.5v7H9.2V5z M10,16c-0.6,0-1-0.4-1-1s0.4-1,1-1    s1,0.4,1,1S10.6,16,10,16z"></path><path d="M9.2,5h1.5v7H9.2V5z M10,16c-0.6,0-1-0.4-1-1s0.4-1,1-1s1,0.4,1,1S10.6,16,10,16z" data-icon-path="inner-path" opacity="0"></path></svg>
+            <div class="bx--inline-notification__text-wrapper">
+                <p class="bx--inline-notification__title">Tip!</p>
+                <p class="bx--inline-notification__subtitle" id="tip">Everyday habits such as leaving the tap open while brushing, taking long showers, and so forth, increases your carbon footprint, and wastes a lot of water. Change these habits, and take shorter showers.</p>
             </div>
-        </header>
+        </div>
+        <button tabindex="0" class="bx--inline-notification__action-button bx--btn bx--btn--sm bx--btn--ghost" type="button" aria-label="close">Got it!</button>
+        <button data-notification-btn class="bx--inline-notification__close-button" type="button" aria-label="close">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__close-icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"></path></svg>
+    </button>
+    </div>
 
-        <div id="content_container">
-            <div id="form_container">
-                <div id="form_header_container">
-                    <h2 id="form_header" style="padding-top: 50px;"> Register </h2>
-                </div>
+    <div id="content_container">
+        <div id="form_container">
+            <div id="form_header_container">
+                <h2 id="form_header" style="padding-top: 50px;"> Register </h2>
+            </div>
 
-        <div id="content_container">
-            <div id="form_container">
-                <div id="form_header_container">
-                    <h2 id="form_header" style="padding-top: 50px;"> Welcome to Carbon Track!</h2>
-                </div>
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h2 id="form_header" style="padding-top: 50px;"> Welcome to Carbon Track!</h2>
+                    </div>
 
-                <div id="form_content_container" style="padding-top: 20px" >
-                    <div id="form_content_inner_container" class="bx--form-item bx--text-input-wrapper">
-                        <input type="text" id="full_name" placeholder="Full name" class="bx--text-input">
-                        <input type="email" id="email" placeholder="Email" class="bx--text-input">
-                        <input type="password" id="password" placeholder="New Password" class="bx--text-input">
-                        <input type="text" id="birth_year" placeholder="Year of Birth [DD/MM/YYYY]" class="bx--text-input">
-                        <input type="text" id="gender" placeholder="Gender" class="bx--text-input">
+                    <div id="form_content_container" style="padding-top: 20px">
+                        <div id="form_content_inner_container" class="bx--form-item bx--text-input-wrapper">
+                            <input type="text" id="full_name" placeholder="Full name" class="bx--text-input">
+                            <input type="email" id="email" placeholder="Email" class="bx--text-input">
+                            <input type="password" id="password" placeholder="New Password" class="bx--text-input">
+                            <input type="text" id="birth_year" placeholder="Year of Birth [DD/MM/YYYY]" class="bx--text-input">
+                            <input type="text" id="gender" placeholder="Gender" class="bx--text-input">
 
-                        <div id="button_container" style="padding-top: 10px" >
-                            <button class="bx--btn bx--btn--primary bx--btn--field" onclick="register()">Register</button>
+                            <div id="button_container" style="padding-top: 10px">
+                                <button class="bx--btn bx--btn--primary bx--btn--field" onclick="register()">Register</button>
+                            </div>
+
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-        <p id="status">Status</p>
-    </body>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+            <p id="status">Status</p>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
-    <!-- Our script must be loaded after firebase references -->
-    <script src="scripts/signup.js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src="scripts/signup.js"></script>
 
 </html>

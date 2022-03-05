@@ -37,3 +37,8 @@ body {
 div.leftAllign {
     text-align: left;
 }
+
+.bx--inline-notification {
+    background-color: #181b20;
+    color: white;
+}
