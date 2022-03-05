@@ -12,6 +12,10 @@ body {
     font-size: 110px;
 }
 
+.bx--inline-notification__close-button .bx--inline-notification__close-icon {
+    fill: white;
+}
+
 
 /* form {
     padding-top: 50px;
