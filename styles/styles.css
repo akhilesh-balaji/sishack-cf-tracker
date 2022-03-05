@@ -42,3 +42,7 @@ div.leftAllign {
     background-color: #181b20;
     color: white;
 }
+
+.bx--inline-notification__close-button {
+    color: white;
+}
