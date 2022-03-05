@@ -25,10 +25,21 @@ async function classifyImage() {
     const label = results[0].label.split(',')[0];
     if (items[label]) {
         const nummed = items[results[0].label + '_num'];
-        if (nummed) nummed.value = ~~nummed.value + 1;
-        else items[label].checked = true;
+        if (nummed) {
+            nummed.value = ~~nummed.value + 1;
+        } else {
+            items[label].checked = true
+        };
         result.innerText = label + " added!";
-    } else result.innerText = "The item was classified as: " + label;
+    } else {
+        if (foodCarbonFootprints[label]) {
+            console.log(label, foodCarbonFootprints[label]);
+            result.innerText = label + " added!";
+            totalcf += foodCarbonFootprints[label];
+        } else {
+            result.innerText = "Not found!";
+        }
+    }
 }
 
 function handleUpload(files) {

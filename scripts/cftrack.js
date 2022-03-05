@@ -15,13 +15,13 @@ try {
 const consumables = {
     apples: 0.032,
     bananas: 0.068,
-    potatoChips: 0.075,
+    potatoChips: 4.82,
     cake: 0.155,
     riceAndBeans: 0.129,
     fruitYogurt: 0.340,
     pizza: 3.336,
     chickenStirFry: 0.608,
-    eggs: 0.333
+    eggs: 4.8,
 }
 
 const mobilePhones = {
@@ -38,6 +38,30 @@ const transportation = {
     car: 0.15, // per kilometer
     plane: 0.285 // per kilometer per passenger
 }
+
+var foodCarbonFootprints = {
+    beef: 27.5,
+    pork: 12.1,
+    lamb: 39.2,
+    pizza: 3.336,
+    riceAndBeans: 0.129,
+    nuts: 2.3,
+    milk: 1.1,
+    fruit: 1.2,
+    coffee: 6.12,
+    tea: 4.8,
+    chocolate: 14.31,
+    apples: 0.032,
+    bananas: 0.068,
+    potatoChips: 4.82,
+    cake: 0.155,
+    riceAndBeans: 0.129,
+    fruitYogurt: 0.340,
+    pizza: 3.336,
+    chickenStirFry: 0.608,
+    eggs: 4.8,
+    lemon: 0.09
+};
 
 const next1 = () => {
     const p1Values = [];
