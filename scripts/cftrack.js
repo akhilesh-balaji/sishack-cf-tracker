@@ -51,7 +51,7 @@ var foodCarbonFootprints = {
     coffee: 6.12,
     tea: 4.8,
     chocolate: 14.31,
-    apples: 0.032,
+    apple: 0.032,
     bananas: 0.068,
     potatoChips: 4.82,
     cake: 0.155,
@@ -60,7 +60,8 @@ var foodCarbonFootprints = {
     pizza: 3.336,
     chickenStirFry: 0.608,
     eggs: 4.8,
-    lemon: 0.09
+    lemon: 0.09,
+    cucumber: 0.42,
 };
 
 const next1 = () => {
