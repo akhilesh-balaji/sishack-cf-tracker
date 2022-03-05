@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login or Register</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/carbon-components/css/carbon-components.min.css" rel="stylesheet">
@@ -13,127 +12,131 @@
     <link rel="stylesheet" href="https://unpkg.com/carbon-components-svelte/css/g100.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <meta charset="utf-8">
-</head>
-
-<body>
-    <header class="bx--header" role="banner" aria-label="CarboTrack" data-header>
-        <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
-        <a href="./">
-            <button class="bx--header__menu-trigger bx--header__action" aria-label="Open menu" title="Open menu" data-navigation-menu-panel-label-expand="Open menu" data-navigation-menu-panel-label-collapse="Close menu" data-navigation-menu-target="#navigation-menu-m6ibyfeacg">
-                <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: none;
-                        }
-                      </style>
-                    </defs>
-                    <path d="M29,26H23V22a2.002,2.002,0,0,1,2-2h2V18H23V16h4a2.0023,2.0023,0,0,1,2,2v2a2.0023,2.0023,0,0,1-2,2H25v2h4Z" transform="translate(0 0)"/>
-                    <path d="M19,22H15a2.0023,2.0023,0,0,1-2-2V10a2.002,2.002,0,0,1,2-2h4a2.002,2.002,0,0,1,2,2V20A2.0023,2.0023,0,0,1,19,22ZM15,10V20h4V10Z" transform="translate(0 0)"/>
-                    <path d="M11,22H5a2.0023,2.0023,0,0,1-2-2V10A2.002,2.002,0,0,1,5,8h6v2H5V20h6Z" transform="translate(0 0)"/>
-                    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
-                  </svg>
-            </button>
-        </a>
-        <a class="bx--header__name" href="javascript:void(0)" title="">
-            <span class="bx--header__name--prefix">
-        Carbo
-      </span>Track
-        </a>
-        <nav class="bx--header__nav" aria-label="CarboTrack" data-header-nav>
-            <ul class="bx--header__menu-bar" aria-label="CarboTrack">
-                <li>
-                    <a class="bx--header__menu-item" href="tracker.html" tabindex="0">
-            Tracker
-          </a>
+    </head>
+    <body>
+        <header class="bx--header" role="banner" aria-label="IBM Platform Name" data-header>
+            <a class="bx--skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
+            <a href="./">
+                <button class="bx--header__menu-trigger bx--header__action" aria-label="Open menu" title="Open menu" data-navigation-menu-panel-label-expand="Open menu" data-navigation-menu-panel-label-collapse="Close menu" data-navigation-menu-target="#navigation-menu-m6ibyfeacg">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: none;
+                            }
+                          </style>
+                        </defs>
+                        <path d="M29,26H23V22a2.002,2.002,0,0,1,2-2h2V18H23V16h4a2.0023,2.0023,0,0,1,2,2v2a2.0023,2.0023,0,0,1-2,2H25v2h4Z" transform="translate(0 0)"/>
+                        <path d="M19,22H15a2.0023,2.0023,0,0,1-2-2V10a2.002,2.002,0,0,1,2-2h4a2.002,2.002,0,0,1,2,2V20A2.0023,2.0023,0,0,1,19,22ZM15,10V20h4V10Z" transform="translate(0 0)"/>
+                        <path d="M11,22H5a2.0023,2.0023,0,0,1-2-2V10A2.002,2.002,0,0,1,5,8h6v2H5V20h6Z" transform="translate(0 0)"/>
+                        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
+                      </svg>
+                </button>
+            </a>
+            <a class="bx--header__name" href="javascript:void(0)" title="">
+                <span class="bx--header__name--prefix">
+            Carbo
+          </span>Track
+            </a>
+            <nav class="bx--header__nav" aria-label="Platform Name" data-header-nav>
+                <ul class="bx--header__menu-bar" aria-label="Platform Name">
+                    <li>
+                        <a class="bx--header__menu-item" href="tracker.html" tabindex="0">
+                Tracker
+              </a>
+                    </li>
+                    <li>
+                        <a class="bx--header__menu-item" href="leaderboard.html" tabindex="0">
+                Leaderboard
+              </a>
+                    </li>
+                    <li>
+                        <a class="bx--header__menu-item" href="./about.html" tabindex="0">
+                About Us
+              </a>
+                    </li>
+                    <li class="bx--header__submenu" data-header-submenu>
+                        <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)" tabindex="0">
+                Account
+                <svg class="bx--header__menu-arrow" width="12" height="7" aria-hidden="true">
+                  <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                </svg>
+              </a>
+                        <ul class="bx--header__menu" aria-label="L1 link 3">
+                            <li role="none">
+                                <a class="bx--header__menu-item" href="register.html" tabindex="-1">
+                                    <span class="bx--text-truncate--end">
+                      Sign up
+                    </span>
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a class="bx--header__menu-item" href="login.html" tabindex="-1">
+                                    <span class="bx--text-truncate--end">
+                      Log in
+                    </span>
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a class="bx--header__menu-item" href="Dashboard.html" tabindex="-1">
+                                    <span class="bx--text-truncate--end">
+                      Dashboard
+                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                 </li>
-                <li>
-                    <a class="bx--header__menu-item" href="leaderboard.html" tabindex="0">
-            Leaderboard
-          </a>
-                </li>
-                <li>
-                    <a class="bx--header__menu-item" href="./about.html" tabindex="0">
-            About Us
-          </a>
-                </li>
-                <li class="bx--header__submenu" data-header-submenu>
-                    <a class="bx--header__menu-item bx--header__menu-title" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)" tabindex="0">
-            Account
-            <svg class="bx--header__menu-arrow" width="12" height="7" aria-hidden="true">
-              <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
-            </svg>
-          </a>
-                    <ul class="bx--header__menu" aria-label="L1 link 3">
-                        <li role="none">
-                            <a class="bx--header__menu-item" href="register.html" tabindex="-1">
-                                <span class="bx--text-truncate--end">
-                  Sign up
-                </span>
-                            </a>
-                        </li>
-                        <li role="none">
-                            <a class="bx--header__menu-item" href="login.html" tabindex="-1">
-                                <span class="bx--text-truncate--end">
-                  Log in
-                </span>
-                            </a>
-                        </li>
-                        <li role="none">
-                            <a class="bx--header__menu-item" href="Dashboard.html" tabindex="-1">
-                                <span class="bx--text-truncate--end">
-                  Dashboard
-                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            </li>
-            </ul>
-        </nav>
-        <div class="bx--header__global">
-            <button class="bx--header__menu-trigger bx--header__action" aria-label="Action 1" title="Action 1" data-navigation-menu-panel-label-expand="Action 1" data-navigation-menu-panel-label-collapse="Close menu" data-product-switcher-target="#switcher-bqavcareoq">
-                <svg width="20" height="20" id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>user</title><path d="M16,4a5,5,0,1,1-5,5,5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,16,2Z"/><path d="M26,30H24V25a5,5,0,0,0-5-5H13a5,5,0,0,0-5,5v5H6V25a7,7,0,0,1,7-7h6a7,7,0,0,1,7,7Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
-      </button>
-            </button>
-        </div>
-    </header>
-
-    <div id="content_container">
-        <div id="form_container">
-            <div id="form_header_container">
-                <h2 id="form_header" style="padding-top: 50px;"> Sign up!</h2>
+                </ul>
+            </nav>
+            <div class="bx--header__global">
+                <button class="bx--header__menu-trigger bx--header__action" aria-label="Action 1" title="Action 1" data-navigation-menu-panel-label-expand="Action 1" data-navigation-menu-panel-label-collapse="Close menu" data-product-switcher-target="#switcher-bqavcareoq">
+                    <svg width="20" height="20" id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>user</title><path d="M16,4a5,5,0,1,1-5,5,5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,16,2Z"/><path d="M26,30H24V25a5,5,0,0,0-5-5H13a5,5,0,0,0-5,5v5H6V25a7,7,0,0,1,7-7h6a7,7,0,0,1,7,7Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
+          </button>
+                </button>
             </div>
+        </header>
 
-            <div id="form_content_container" style="padding-top: 20px">
-                <div id="form_content_inner_container" class="bx--form-item bx--text-input-wrapper">
-                    <input type="text" id="full_name" placeholder="Full name" class="bx--text-input">
-                    <input type="email" id="email" placeholder="Email" class="bx--text-input">
-                    <input type="password" id="password" placeholder="New Password" class="bx--text-input">
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header" style="padding-top: 50px;"> Register </h2>
+                </div>
 
-                    <input type="text" id="birth_year" placeholder="Year of Birth [DD/MM/YYYY]" class="bx--text-input">
-                    <input type="text" id="gender" placeholder="Gender" class="bx--text-input">
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header" style="padding-top: 50px;"> Welcome to Carbon Track!</h2>
+                </div>
 
-                    <div id="button_container" style="padding-top: 10px">
-                        <button class="bx--btn bx--btn--primary bx--btn--field" onclick="register()">Register</button>
+                <div id="form_content_container" style="padding-top: 20px" >
+                    <div id="form_content_inner_container" class="bx--form-item bx--text-input-wrapper">
+                        <input type="text" id="full_name" placeholder="Full name" class="bx--text-input">
+                        <input type="email" id="email" placeholder="Email" class="bx--text-input">
+                        <input type="password" id="password" placeholder="New Password" class="bx--text-input">
+                        <input type="text" id="birth_year" placeholder="Year of Birth [DD/MM/YYYY]" class="bx--text-input">
+                        <input type="text" id="gender" placeholder="Gender" class="bx--text-input">
+
+                        <div id="button_container" style="padding-top: 10px" >
+                            <button class="bx--btn bx--btn--primary bx--btn--field" onclick="register()">Register</button>
+                        </div>
+
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
-    <p id="status">Status</p>
-</body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <p id="status">Status</p>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
-<!-- Our script must be loaded after firebase references -->
-<script src="scripts/signup.js"></script>
+    <!-- Our script must be loaded after firebase references -->
+    <script src="scripts/signup.js"></script>
 
 </html>

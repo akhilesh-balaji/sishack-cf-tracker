@@ -1,6 +1,3 @@
-
-  // Your web app's Firebase configuration
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAIIdB5-KL3zrLJF6CvtobOngzZ9Qt7P9Y",
@@ -25,8 +22,6 @@ var firebaseConfig = {
     full_name = document.getElementById('full_name').value
     birth_year = document.getElementById('birth_year').value
     gender = document.getElementById('gender').value
-
-
   
     // Validate input fields
     if (validate_email(email) == false || validate_password(password) == false) {
@@ -34,13 +29,8 @@ var firebaseConfig = {
       return
       // Don't continue running the code
     }
-
-    if (validate_field(full_name) == false || validate_field(birth_year) == false || validate_field(gender) == false) {
-      document.getElementById("status").innerHTML = "One of the fields are invalid!";
-
     if (validate_field(full_name) == false) {
       document.getElementById("status").innerHTML = "Given username is invalid!";
-
       return
     }
    
@@ -57,9 +47,9 @@ var firebaseConfig = {
       var user_data = {
         email : email,
         full_name : full_name,
+        last_login : Date.now(),
         birth_year : birth_year,
-        gender : gender,
-        last_login : Date.now()
+        gender : gender
       }
   
       // Push to Firebase Database
@@ -73,7 +63,7 @@ var firebaseConfig = {
       var error_code = error.code
       var error_message = error.message
   
-      alert(error_message)
+      document.getElementById("status").innerHTML = error_message;
     })
   }
   
@@ -115,7 +105,7 @@ var firebaseConfig = {
       var error_code = error.code
       var error_message = error.message
   
-      alert(error_message)
+      document.getElementById("status").innerHTML = error_message;
     })
   }
   
@@ -154,4 +144,3 @@ var firebaseConfig = {
       return true
     }
   }
-}
