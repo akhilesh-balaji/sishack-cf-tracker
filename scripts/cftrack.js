@@ -201,7 +201,7 @@ const calcFootprint = () => {
     console.log(totalcf);
     totalcf = Math.round(totalcf * 1000) / 1000;
     document.getElementById("cfvalue").innerHTML = totalcf + "kg";
-    document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low. AMAZING job!" : totalcf < 5 ? "Your carbon footprint is not that high. Great going!" : "Your carbon footprint is very high. Try switching to an electronic car.";
+    document.getElementById("howitsgoing").innerHTML = totalcf < 2 ? "Your carbon footprint is low. AMAZING job!" : totalcf < 5 ? "Your carbon footprint is not that high. Great going!" : "Your carbon footprint is very high. Eek!";
 
     const date = Date.now();
     const days = ~~(date / (24 * 60 * 60 * 1000));
