@@ -4,6 +4,15 @@ const classifier = ml5.imageClassifier("MobileNet", console.log);
 const result = document.querySelector(".result p");
 const image = document.querySelector(".image");
 
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
 async function classifyImage() {
     const results = await classifier.classify(image);
     console.log(results);
@@ -30,11 +39,11 @@ async function classifyImage() {
         } else {
             items[label].checked = true
         };
-        result.innerText = label + " added!";
+        result.innerText = toTitleCase(label) + " added!";
     } else {
         if (foodCarbonFootprints[label]) {
             console.log(label, foodCarbonFootprints[label]);
-            result.innerText = label + " added!";
+            result.innerText = toTitleCase(label) + " added!";
             totalcf += foodCarbonFootprints[label];
         } else {
             result.innerText = "Not found!";

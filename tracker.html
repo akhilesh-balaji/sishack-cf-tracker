@@ -101,6 +101,8 @@
 
     <!-- The carbon footprint tracker -->
 
+    <h2 style="padding-top: 50px;">Tell us about today.</h2>
+
     <form id="p1">
         <fieldset class="bx--fieldset">
             <legend class="bx--label">What activities did you engage in today? Select all that apply.</legend>
@@ -167,9 +169,25 @@
         <div class="result">
             <p>&nbsp;</p>
         </div>
-        <div class="capture">
+        <!-- <div class="capture">
             <div class="record"></div>
             <input class="input" type="file" accept="image/*" onchange="handleUpload(this.files)" capture/>
+        </div> -->
+        <div class="bx--form-item">
+            <strong class="bx--file--label">Image of Dish</strong>
+            <p class="bx--label-description">Only image files</p>
+            <div class="bx--file capture" data-file data-file-demo-state-manager>
+                <label for="file-uploader" class="bx--file-browse-btn" role="button" tabindex="0">
+                <div data-file-drop-container class="bx--file__drop-container">
+                  Drag and drop files here or
+                  upload
+                  <input type="file" class="bx--file-input input" id="file-uploader" data-file-uploader
+                    data-target="[data-file-container]" accept="image/*" onchange="handleUpload(this.files)" capture />
+                </div>
+              </label>
+                <div data-file-container class="bx--file-container">
+                </div>
+            </div>
         </div>
         <fieldset class="bx--fieldset">
             <legend class="bx--label">What did you consume today? Select all that apply.</legend>
